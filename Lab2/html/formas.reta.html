@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Projeto CG</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" />
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="../js/bootstrap.bundle.min.js"></script> 
+    <script src="../js/p5.min.js"></script> 
+    <script src="../js/sketch-formas-reta.js"></script> 
+    <script src="../js/algoritmos.js"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container"> <a class="navbar-brand" href="#">Projeto CG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="dda-ponto-medio" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Formas</a>
+                        <ul class="dropdown-menu" aria-labelledby="dda-ponto-medio">
+                            <li><a class="dropdown-item" href="formas-circulo.html">Círculo</a></li>
+                            <li><a class="dropdown-item" href="formas-elipse.html">Elipse</a></li>
+                            <li><a class="dropdown-item" href="formas-reta.html">Reta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<main>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4">Desenho de primitivas básicas: Retas.</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-5 controles">
+                    <h5 class="mt-4">Configurações da Reta:</h5>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <input id="xa" type="text" class="form-control" placeholder="X do ponto A">
+                        </div>
+                        <div class="col">
+                            <input id="ya" type="text" class="form-control" placeholder="Y do ponto A">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <input id="xb" type="text" class="form-control" placeholder="X do ponto B">
+                        </div>
+                        <div class="col">
+                            <input id="yb" type="text" class="form-control" placeholder="Y do ponto B">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <select id="algoritmo" class="form-select">
+                                <option selected value="">Selecione o algoritmo</option>
+                                <option value="dda">DDA</option>
+                                <option value="ponto-medio">Ponto Médio</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <select id="cor" class="form-select">
+                                <option selected value="red">Vermelho</option>
+                                <option value="green">Verde</option>
+                                <option value="blue">Azul</option>                                
+                                <option value="yellow">Amarelo</option>
+                                <option value="magenta">Magenta</option>
+                                <option value="cyan">Ciano</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4">
+                        <div class="col">
+                            <button id="desenhar" class="btn btn-primary mb-2">Desenhar reta</button>
+                        </div>
+                    </div>
+
+                    <div class="row botao">
+                        <div class="col">
+                            <button id="testar" class="btn btn-primary mb-2">Testar oitantes</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao">
+                        <div class="col">
+                            <button id="limpar" class="btn btn-primary mb-2">Limpar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xl-7 pt-3">
+                    <div id="screen"></div>
+                    <ul id="coordenadas-mouse" class="list-inline">
+                        <li class="list-inline-item"><b>X:</b></li>
+                        <li id="mouseX" class="list-inline-item">0</li>
+                        <li class="list-inline-item"><b>Y:</b></li>
+                        <li id="mouseY" class="list-inline-item">0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>
