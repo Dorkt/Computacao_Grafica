@@ -50,59 +50,6 @@ function novaTela() {
   updatePixels();
 }
 
-// Desenhar retangulo na tela
-function desenharRetangulo(xOrigem , yOrigem , largura, altura , cor = 'red') {
-    var x = 0
-    var y = 1
-    
-    var ponto1 = [xOrigem , yOrigem]
-    var ponto2 = [xOrigem + largura , yOrigem]
-    var ponto3 = [xOrigem + largura , yOrigem + altura]
-    var ponto4 = [xOrigem , yOrigem + altura]
-
-    var pontos = getRetaDDA(ponto1[x] , ponto1[y] , ponto2[x] , ponto2[y])
-    pontos = pontos.concat( getRetaDDA(ponto2[x] , ponto2[y] , ponto3[x],ponto3[y]))
-    pontos = pontos.concat( getRetaDDA(ponto3[x] , ponto3[y] , ponto4[x],ponto4[y]))
-    pontos = pontos.concat( getRetaDDA(ponto4[x] , ponto4[y] , ponto1[x],ponto1[y]))
-
-    pontos.forEach(function (ponto, i) {
-        desenharPixel(ponto[0], ponto[1], cor);
-    });
-}
-
-// Desenhar Figura na tela
-function desenharFigura(pontos , cor ='red') {
-  var pontosLigados = [  getPontosLigados(pontos[0]) , getPontosLigados(pontos[1]) ]
-  var pontosX = []
-  var pontosY = []
-  var pontos = []
-  
-  for(let i = 0 ; i < pontosLigados[0].length ; i++) {
-     pontosX.push( getPontosLigados(      pontosLigados[0][i])[0]          )
-     pontosY.push( getPontosLigados(      pontosLigados[1][i]  )  [0]        )
-  }
-  for(let i = 0 ; i < pontosX.length ; i++ ) {
-    pontos = pontos.concat( getRetaDDA(pontosX[i][0] , pontosY[i][0] , pontosX[i][1],pontosY[i][1]))
-  }
-
-  pontos.forEach(function (ponto, i) {
-      desenharPixel(ponto[0], ponto[1], cor);
-  });
-
-
-}
-
-// Determinar qual ponto deve esta ligado a qual no desenhar figura
-function getPontosLigados(lista) {
-  var resultado = []
-  for(let i = 0 ; i < lista.length ; i++) { 
-    resultado.push([ lista[i] ,lista[ (i + 1) % lista.length]] )
-  }
-
-  return resultado
-
-}
-
 // Desenhar Reta na tela
 function desenharReta(xa, ya, xb, yb, algoritmo = "ponto-medio", cor = "red") {
   let pontos = [];
@@ -126,10 +73,6 @@ function desenharPixel(x, y, cor = "red") {
   set(x, y, color(cor));
 }
 
-// Calcular variacao de delta
-function getDelta(a, b) {
-  return a - b;
-}
 
 // Calcular reta utilizado algoritmo do ponto médio
 function getRetaPontoMedio(x0, y0, x1, y1) {

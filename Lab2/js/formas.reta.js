@@ -78,15 +78,6 @@ function setup() {
       desenharReta(0, 0, -max, -i, algoritmo, cor); // 6º octante
       desenharReta(0, 0, -max, i, algoritmo, cor); // 7º octante
       desenharReta(0, 0, -i, max, algoritmo, cor); // 8º octante
-      
-      /*desenharReta(i, max, 0, 0, algoritmo, 'blue');
-      desenharReta(max, i, 0, 0, algoritmo, 'blue');
-      desenharReta(max, -i, 0, 0, algoritmo, 'blue');
-      desenharReta(i, -max, 0, 0, algoritmo, 'blue');
-      desenharReta(-i, -max, 0, 0, algoritmo, 'blue');
-      desenharReta(-max, -i, 0, 0, algoritmo, 'blue');
-      desenharReta(-max, i, 0, 0, algoritmo, 'blue');
-      desenharReta(-i, max, 0, 0, algoritmo, 'blue');*/
     }
     updatePixels();
   }
