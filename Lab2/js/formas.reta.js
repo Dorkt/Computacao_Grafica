@@ -6,10 +6,6 @@ function setup() {
       atualizarTela();
     }
   
-    document.querySelector('#testar').onclick = function() {
-      testar();
-    }
-  
     document.querySelector('#limpar').onclick = function() {
       novaTela();
     }
@@ -33,7 +29,7 @@ function setup() {
     var inputX2 = document.querySelector("#xb");
     var inputY2 = document.querySelector("#yb");
     var algoritmo = document.querySelector("#algoritmo").value;
-    var cor = document.querySelector("#cor").value;
+    var cor = 'red';
   
     if(inputX1.value == "" || inputY1.value == "" || inputX2.value == "" || inputY2.value == "") {
       alert("Preencha todas as informações da reta.");
@@ -57,27 +53,3 @@ function setup() {
     updatePixels();
   }
   
-  function testar() {
-    novaTela();
-    
-    var cor = document.querySelector("#cor").value;
-    var algoritmo = document.querySelector("#algoritmo").value;
-  
-    if(algoritmo == "") {
-      alert("Escolha o algoritmo para o desenho das retas.");
-      return false;
-    }
-  
-    var max = 300;
-    for(var i = 0; i <= max; i = i + 10) {
-      desenharReta(0, 0, i, max, algoritmo, cor); // 1º octante
-      desenharReta(0, 0, max, i, algoritmo, cor); // 2º octante
-      desenharReta(0, 0, max, -i, algoritmo, cor); // 3º octante
-      desenharReta(0, 0, i, -max, algoritmo, cor); // 4º octante
-      desenharReta(0, 0, -i, -max, algoritmo, cor); // 5º octante    
-      desenharReta(0, 0, -max, -i, algoritmo, cor); // 6º octante
-      desenharReta(0, 0, -max, i, algoritmo, cor); // 7º octante
-      desenharReta(0, 0, -i, max, algoritmo, cor); // 8º octante
-    }
-    updatePixels();
-  }
