@@ -31,7 +31,7 @@
 }
 
 #coordenadas-mouse {
-    text-align: center;
+    text-align: 0 auto;
     margin: 0 auto;
     width: 600px;
     font-size: 14px;
