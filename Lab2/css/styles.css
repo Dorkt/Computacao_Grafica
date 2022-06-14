@@ -43,14 +43,13 @@
 .title {
     font-size: 35px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .dropdown-menu button {
     width: 25rem;
     height: 3rem;
     margin-left: 7rem;
-    border-color: #0066A2;
+
 }
 
 .dropdown-menu li {
@@ -64,7 +63,6 @@
 .config {
     margin-top: 70px;
     font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #desenhar-elipse {
