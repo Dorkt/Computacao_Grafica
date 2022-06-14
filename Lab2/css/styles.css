@@ -26,6 +26,8 @@
 
 .controles .row.botao button {
     width: 100%;
+    background: #e6f08b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #coordenadas-mouse {
@@ -33,6 +35,7 @@
     margin: 0 auto;
     width: 600px;
     font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #mouseX,
@@ -43,12 +46,15 @@
 .title {
     font-size: 35px;
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .dropdown-menu button {
     width: 25rem;
     height: 3rem;
     margin-left: 7rem;
+    background: #d9e475;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -63,6 +69,7 @@
 .config {
     margin-top: 70px;
     font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #desenhar-elipse {
