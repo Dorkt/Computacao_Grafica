@@ -10,12 +10,12 @@
 
 #screen {
     display: table;
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 .controles .row {
     --bs-gutter-x: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -38,4 +38,103 @@
 #mouseX,
 #mouseY {
     width: 50px;
+}
+
+.title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.dropdown-menu button {
+    width: 25rem;
+    height: 3rem;
+    margin-left: 7rem;
+}
+
+.dropdown-menu li {
+    display: inline;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+}
+
+.config {
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+#desenhar-elipse {
+    width: 25rem;
+    height: 2rem;
+    float: left;
+    margin-right: 7rem;
+    margin-left: 27.5rem;
+}
+
+#desenhar-circunferencia {
+    width: 25rem;
+    height: 2rem;
+    float: left;
+    margin-right: 7rem;
+    margin-left: 27.5rem;
+}
+
+#limpar {
+    width: 25rem;
+    height: 2rem;
+}
+
+#x_origem {
+    float: left;
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+#raio_x {
+    float: left;
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+#algoritmo {
+    margin-left: 14rem;
+    margin-bottom: 5rem;
+}
+
+#algoritmoCirc {
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+}
+
+#algoritmoReta {
+    float: left;
+    margin-left: 7rem;
+    margin-right: 3rem;
+}
+
+#raio {
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+    float: left;
+}
+
+#xa {
+    float: left;
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+#xb {
+    float: left;
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+#desenhar {
+    width: 25rem;
+    height: 2rem;
+    float: left;
+    margin-right: 7rem;
+    margin-left: 27.5rem;
 }
