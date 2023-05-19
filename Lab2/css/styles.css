@@ -13,6 +13,10 @@
     margin: 5rem auto;
 }
 
+#envs {
+    display: table;
+}
+
 .controles .row {
     --bs-gutter-x: 1rem;
     margin-top: 2rem;
